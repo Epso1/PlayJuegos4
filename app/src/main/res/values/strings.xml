@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PlayJuegos1</string>
+    <string name="title_activity_new_player">NewPlayer</string>
+    <string name="action_settings">Action settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_add">Add</string>
+</resources>
