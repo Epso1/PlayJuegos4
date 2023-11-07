@@ -1,65 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:translationX="50dp"
-    android:translationY="250dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/courgette"
-        android:text="Play Juegos"
-        android:textAlignment="center"
-        android:textColor="#636363"
-        android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#CDCDCD"
-        android:text="PLAY"
-        android:textColor="#000000"
-        app:cornerRadius="0dp"
-        />
+        android:orientation="vertical"
+        android:translationX="50dp"
+        android:translationY="200dp">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#CDCDCD"
-        android:text="NEW PLAYER"
-        android:textColor="#000000"
-        app:cornerRadius="0dp"
-        />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#CDCDCD"
-        android:text="PREFERENCES"
-        android:textColor="#000000"
-        app:cornerRadius="0dp"
-        />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/courgette"
+            android:text="Play Juegos"
+            android:textAlignment="center"
+            android:textColor="#636363"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#CDCDCD"
-        android:text="ABOUT"
-        android:textColor="#000000"
-        app:cornerRadius="0dp"
-        />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/cian"
+            android:text="PLAY"
+            android:textColor="@color/white"
+            app:rippleColor="@color/md_theme_light_tertiary"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/cian"
+            android:text="NEW PLAYER"
+            android:textColor="@color/white"
+            app:rippleColor="@color/md_theme_light_tertiary"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/cian"
+            android:text="PREFERENCES"
+            android:textColor="@color/white"
+            app:rippleColor="@color/md_theme_light_tertiary"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/cian"
+            android:text="ABOUT"
+            android:textColor="@color/white"
+            app:rippleColor="@color/md_theme_light_tertiary"/>
+    </LinearLayout>
 </LinearLayout>
