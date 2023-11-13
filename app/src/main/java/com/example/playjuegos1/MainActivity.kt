@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val jugar = findViewById(R.id.button1) as Button
         val sobre = findViewById(R.id.button4) as Button
 
+
         jugador.setOnClickListener{
             lanzarNewPLayer()
             android.widget.Toast.makeText(this, "Has pulsado el material button", android.widget.Toast.LENGTH_SHORT).show()
@@ -37,7 +38,10 @@ class MainActivity : AppCompatActivity() {
             android.widget.Toast.makeText(this, "Has pulsado el material button", android.widget.Toast.LENGTH_SHORT).show()
         }
 
-        sobre.setOnClickListener{Toast.makeText(this, "Has pulsado el material button", Toast.LENGTH_SHORT).show()}
+        sobre.setOnClickListener{
+            lanzarAbout()
+            Toast.makeText(this, "Has pulsado el material button", Toast.LENGTH_SHORT).show()
+        }
 
 
     }
@@ -48,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.getItemId()) {
-            (R.id.action_search) -> { val intent = Intent(this, Plataformas::class.java)
+            (R.id.action_search) -> { val intent = Intent(this, Generos::class.java)
                 startActivity(intent)
                 return true}
             (R.id.action_add) -> {return true}
@@ -69,6 +73,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun lanzarPlay(){
         val i = Intent(this, Games::class.java)
+        startActivity(i)
+    }
+
+    private fun lanzarAbout(){
+        val i = Intent(this, About::class.java)
         startActivity(i)
     }
 

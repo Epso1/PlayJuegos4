@@ -2,29 +2,29 @@ package com.example.playjuegos1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.view.animation.TranslateAnimation
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import android.widget.TextView
+
 import android.widget.Toast
-import androidx.compose.material3.Snackbar
-import androidx.core.os.HandlerCompat.postDelayed
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.google.android.material.snackbar.Snackbar
 
-class Plataformas : AppCompatActivity() {
+class Generos : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_plataformas_2)
+        setContentView(R.layout.activity_generos)
 
-        val datos = arrayOf( "Acción", "Aventura", "Deportes", "Disparos", "Estrategia", "Lucha", "Musical", "Rol", "Simulación") // Crear un ArrayAdapter
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, datos)
-        val listView = findViewById<ListView>(R.id.listaGeneros)
-        listView.adapter = adapter
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewGeneros)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        val adapter = GenerosAdapter()
+        recyclerView.adapter = adapter
+
 
         val fab = findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fab)
 
@@ -44,15 +44,12 @@ class Plataformas : AppCompatActivity() {
             }
         }
 
-        listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
-            val itemText = listView.getItemAtPosition(position).toString()
-            showToast(itemText)
-        }
+
 
     }
 
 
-    private fun showToast(message: String) {
+    public fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
